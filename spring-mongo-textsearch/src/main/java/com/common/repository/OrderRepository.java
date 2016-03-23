@@ -8,7 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 import com.common.model.Order;
 
 public interface OrderRepository extends CrudRepository<Order, Integer>{
-	List<Order> findByOrderId(TextCriteria criteria);
-	
+	List<Order> findAllBy(TextCriteria criteria);
 	
 }

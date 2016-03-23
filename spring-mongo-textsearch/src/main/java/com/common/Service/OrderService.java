@@ -5,5 +5,5 @@ import java.util.List;
 import com.common.model.Order;
 
 public interface OrderService {
-	List<Order> findByOrderId(Integer orderId);
+	List<Order> findAllBy(String searchValue);
 }

@@ -7,15 +7,11 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.TextCriteria;
-import org.springframework.data.mongodb.core.query.TextQuery;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.common.Service.OrderService;
 import com.common.model.Order;
-import com.common.repository.OrderRepository;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -24,17 +20,14 @@ public class OrderTest {
 	private static final Logger LOGGER = LoggerFactory.getLogger(OrderTest.class);
 
 	@Autowired
-	private OrderRepository orderRepository;
-
-	@Autowired
-	private MongoOperations mongoOperations;
+	private OrderService orderService; 
 
 	@Test
 	public void testOrderSearch() {
-		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny("Toms Spezialitäten");
-		Query query = TextQuery.queryText(criteria).sortByScore();
-
-		List<Order> orders = mongoOperations.find(query, Order.class);
+		LOGGER.debug("---- testOrderSearch -----");
+		
+		List<Order> orders =orderService.findAllBy("Toms Spezialitäten");
+		
 		LOGGER.debug("SIZE  : ["+orders.size()+"]");
 		for (Order order : orders) {
 			LOGGER.debug("--------------------------------------");
