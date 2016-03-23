@@ -31,7 +31,7 @@ public class OrderTest {
 
 	@Test
 	public void testOrderSearch() {
-		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny("Lyon");
+		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny("Toms Spezialitäten");
 		Query query = TextQuery.queryText(criteria).sortByScore();
 
 		List<Order> orders = mongoOperations.find(query, Order.class);
@@ -41,7 +41,7 @@ public class OrderTest {
 			LOGGER.debug(order.getCustomerId());
 			LOGGER.debug(order.getShipName());
 			LOGGER.debug(""+order.getShipCountry());
-			LOGGER.debug(order.getShipPostalCode());
+			LOGGER.debug(""+order.getShipPostalCode());
 			LOGGER.debug(order.getShipRegion());
 			LOGGER.debug(""+order.getEmployeeId());
 		}

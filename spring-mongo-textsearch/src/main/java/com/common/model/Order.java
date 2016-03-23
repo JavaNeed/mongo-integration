@@ -39,7 +39,7 @@ public class Order {
 	private String shipName;
 	
 	@Field("ShipAddress")
-	private Integer shipAddress;
+	private String shipAddress;
 	
 	@Field("ShipCity")
 	private String shipCity;
@@ -48,13 +48,10 @@ public class Order {
 	private String shipRegion;
 
 	@Field("ShipPostalCode")
-	private String shipPostalCode;
+	private Integer shipPostalCode;
 	
 	@Field("ShipCountry")
-	private Integer shipCountry;
-	
-	@Field("field14")
-	private String field14;
+	private String shipCountry;
 
 	public ObjectId getId() {
 		return id;
@@ -136,11 +133,11 @@ public class Order {
 		this.shipName = shipName;
 	}
 
-	public Integer getShipAddress() {
+	public String getShipAddress() {
 		return shipAddress;
 	}
 
-	public void setShipAddress(Integer shipAddress) {
+	public void setShipAddress(String shipAddress) {
 		this.shipAddress = shipAddress;
 	}
 
@@ -160,27 +157,19 @@ public class Order {
 		this.shipRegion = shipRegion;
 	}
 
-	public String getShipPostalCode() {
+	public Integer getShipPostalCode() {
 		return shipPostalCode;
 	}
 
-	public void setShipPostalCode(String shipPostalCode) {
+	public void setShipPostalCode(Integer shipPostalCode) {
 		this.shipPostalCode = shipPostalCode;
 	}
 
-	public Integer getShipCountry() {
+	public String getShipCountry() {
 		return shipCountry;
 	}
 
-	public void setShipCountry(Integer shipCountry) {
+	public void setShipCountry(String shipCountry) {
 		this.shipCountry = shipCountry;
-	}
-
-	public String getField14() {
-		return field14;
-	}
-
-	public void setField14(String field14) {
-		this.field14 = field14;
 	}
 }
