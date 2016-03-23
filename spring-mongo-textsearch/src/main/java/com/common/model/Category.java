@@ -11,21 +11,22 @@ public class Category {
 	private ObjectId id;
 	
 	@Field("CategoryID")
-	private Integer categoryID;
+	private Integer categoryId;
 	
 	@Field("CategoryName")
-	private Integer categoryName;
+	private String categoryName;
 	
 	@Field("Description")
-	private Integer description;
+	private String description;
 	
 	@Field("Picture")
-	private Integer picture;
+	private String picture;
 	
-	private Integer field4;
-	private Integer field5;
-	private Integer field6;
-	private Integer field7;
+	private String field4;
+	private String field5;
+	private String field6;
+	private String field7;
+	
 	
 	public ObjectId getId() {
 		return id;
@@ -33,52 +34,52 @@ public class Category {
 	public void setId(ObjectId id) {
 		this.id = id;
 	}
-	public Integer getCategoryID() {
-		return categoryID;
+	public Integer getCategoryId() {
+		return categoryId;
 	}
-	public void setCategoryID(Integer categoryID) {
-		this.categoryID = categoryID;
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
 	}
-	public Integer getCategoryName() {
+	public String getCategoryName() {
 		return categoryName;
 	}
-	public void setCategoryName(Integer categoryName) {
+	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	public Integer getDescription() {
+	public String getDescription() {
 		return description;
 	}
-	public void setDescription(Integer description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Integer getPicture() {
+	public String getPicture() {
 		return picture;
 	}
-	public void setPicture(Integer picture) {
+	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	public Integer getField4() {
+	public String getField4() {
 		return field4;
 	}
-	public void setField4(Integer field4) {
+	public void setField4(String field4) {
 		this.field4 = field4;
 	}
-	public Integer getField5() {
+	public String getField5() {
 		return field5;
 	}
-	public void setField5(Integer field5) {
+	public void setField5(String field5) {
 		this.field5 = field5;
 	}
-	public Integer getField6() {
+	public String getField6() {
 		return field6;
 	}
-	public void setField6(Integer field6) {
+	public void setField6(String field6) {
 		this.field6 = field6;
 	}
-	public Integer getField7() {
+	public String getField7() {
 		return field7;
 	}
-	public void setField7(Integer field7) {
+	public void setField7(String field7) {
 		this.field7 = field7;
 	}
 }
