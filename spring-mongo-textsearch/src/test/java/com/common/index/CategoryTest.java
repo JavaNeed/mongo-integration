@@ -34,5 +34,7 @@ public class CategoryTest {
 		LOGGER.debug("field6      : "+category.getField6());
 		LOGGER.debug("field7      : "+category.getField7());
 	}
+	
+	
 
 }
