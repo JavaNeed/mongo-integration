@@ -45,4 +45,9 @@ public class CustomerServiceImpl implements CustomerService{
 		return customers;
 	}
 
+	public List<Customer> findByRegionNotNull() {
+		List<Customer> customers =customerRepository.findByRegionNotNull();
+		return customers;
+	}
+
 }

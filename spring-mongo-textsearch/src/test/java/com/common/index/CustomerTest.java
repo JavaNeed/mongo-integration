@@ -87,4 +87,10 @@ public class CustomerTest {
 		List<Customer> customers =cService.findByRegionNull(); 
 		LOGGER.debug("SIZE : "+customers.size());
 	}
+	
+	@Test
+	public void testRegionNotNull(){
+		List<Customer> customers =cService.findByRegionNotNull(); 
+		LOGGER.debug("SIZE : "+customers.size());
+	}
 }

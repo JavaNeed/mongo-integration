@@ -12,4 +12,5 @@ public interface CustomerService {
 	List<Customer> findByCityNotIn(Collection<String> city);
 	List<Customer> findByCompanyNameLike(String companyName);
 	List<Customer> findByRegionNull();
+	List<Customer> findByRegionNotNull();
 }

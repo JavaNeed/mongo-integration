@@ -3,6 +3,7 @@ package com.common.repository;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.common.model.Customer;
@@ -22,5 +23,9 @@ public interface CustomerRepository extends CrudRepository<Customer, String>{
 	// { "CompanyName" : { "$regex" : "Pericles"}}
 	List<Customer> findByCompanyNameLike(String companyName);
 	
+	@Query("{ 'Region' : 'NULL' }")
 	List<Customer> findByRegionNull();
+	
+	@Query("{ 'Region' : { '$ne' :  'NULL' }}")
+	List<Customer> findByRegionNotNull();
 }
