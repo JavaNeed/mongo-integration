@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.data.mongodb.core.index.TextIndexDefinition.TextIndexDefinitionBuilder;
 
 import com.common.model.Order;
+import com.common.model.OrderDetails;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,5 +27,15 @@ public class IndexToolTest {
 		
 		mongoTemplate.indexOps(Order.class).ensureIndex(new TextIndexDefinitionBuilder()
 		.onAllFields().build());
+	}
+	
+	
+	@Test
+	public void testCreateIndexOnOrderDetails(){
+		mongoTemplate.indexOps(OrderDetails.class).ensureIndex(new TextIndexDefinitionBuilder()
+		//.onField("OrderID")
+		.onField("ProductID")
+		.onField("UnitPrice")
+		.onField("Quantity").onField("Discount").build());
 	}
 }

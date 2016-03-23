@@ -38,5 +38,6 @@
     <beans:bean id="orderService" class="com.common.Service.OrderServiceImpl" />
 	<beans:bean id="categoryService" class="com.common.Service.CategoryServiceImpl" />
 	<beans:bean id="customerService" class="com.common.Service.CustomerServiceImpl" />
+	<beans:bean id="orderDetailsService" class="com.common.Service.OrderDetailsServiceImpl" />
 	
 </beans:beans>

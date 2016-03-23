@@ -1,6 +1,6 @@
 spring-mongo-textsearch
 ------------------------
-db.orders.dropIndex("OrderID_text") 
+db['order-details'].dropIndex("OrderID_text") 
 
 db.orders.createIndex({"OrderID":"text"})
 
