@@ -6,6 +6,15 @@ db.orders.createIndex({"OrderID":"text"})
 
 db.orders.find( { $text: { $search: "\"Lyon\"" } } )
 
+db.orders.find( { $text: { $search: "\"lyon\"",language: "en"} } )
+
+db.orders.find( { $text: { $search: "\"reims\"" } } )
+
+
+Note:
+------
+Execute IndexToolTest.java once
+
 Reference URL:
 ****************
 
