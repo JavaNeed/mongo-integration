@@ -26,7 +26,15 @@ public class OrderTest {
 	public void testOrderSearch() {
 		LOGGER.debug("---- testOrderSearch -----");
 		
-		List<Order> orders =orderService.findAllBy("Toms Spezialitäten");
+		// Working Scenarios
+		//List<Order> orders =orderService.findAllBy("PRINI");
+		
+		//List<Order> orders =orderService.findAllBy("7");
+		
+		// { "$text" : { "$search" : "2"}}
+//		List<Order> orders =orderService.findAllBy("2");
+		
+		List<Order> orders =orderService.findAllBy("1756");
 		
 		LOGGER.debug("SIZE  : ["+orders.size()+"]");
 		for (Order order : orders) {

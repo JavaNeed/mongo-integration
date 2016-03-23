@@ -19,7 +19,7 @@ public class OrderServiceImpl implements OrderService{
 	private MongoOperations mongoOperations;
 
 	public List<Order> findAllBy(String searchValue) {
-		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny("Toms Spezialitäten");
+		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny(searchValue);
 		Query query = TextQuery.queryText(criteria).sortByScore();
 
 		List<Order> orders = mongoOperations.find(query, Order.class);
