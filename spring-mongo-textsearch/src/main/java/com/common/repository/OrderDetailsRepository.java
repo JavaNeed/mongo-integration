@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.common.model.OrderDetails;
 
-public interface OrderDetailsRepository extends CrudRepository<OrderDetails, String>{
+public interface OrderDetailsRepository extends CrudRepository<OrderDetails, Integer>{
 
 	List<OrderDetails> findAllBy(TextCriteria criteria);
 }

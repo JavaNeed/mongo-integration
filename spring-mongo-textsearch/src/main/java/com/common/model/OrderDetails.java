@@ -11,7 +11,7 @@ public class OrderDetails {
 	private ObjectId id;
 	
 	@Field("OrderID")
-	private String orderId;
+	private Integer orderId;
 	
 	@Field("ProductID")
 	private String productId;
@@ -33,11 +33,11 @@ public class OrderDetails {
 		this.id = id;
 	}
 
-	public String getOrderId() {
+	public Integer getOrderId() {
 		return orderId;
 	}
 
-	public void setOrderId(String orderId) {
+	public void setOrderId(Integer orderId) {
 		this.orderId = orderId;
 	}
 
